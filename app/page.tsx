@@ -261,7 +261,7 @@ export default function EnhancedFunnelV2() {
               </div>
 
               <button className="w-full py-10 bg-[#0F172A] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 hover:scale-[1.01] transition-all">
-                Finalize Verification <ArrowRight size={20} />
+                <a href="https://www.enhanced.com/products/longevity?savvy_flow_version=latest">Finalize Verification</a>
               </button>
             </motion.div>
           )}
