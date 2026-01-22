@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   ArrowRight, Check, ChevronRight, Activity, Zap, 
-  Shield, Beaker, Sparkles, Calendar, Stethoscope
+  Shield, Beaker, Sparkles, Calendar, Stethoscope, FileText
 } from 'lucide-react';
 
 // --- Types & Data ---
@@ -234,35 +234,28 @@ export default function EnhancedFunnelV2() {
 
           {/* STEP 5: MEDICAL INTAKE */}
           {step === 'intake' && (
-            <motion.div key="intake" variants={containerVariants} initial="initial" animate="animate" exit="exit" className="space-y-8 text-center py-10">
-              <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">
-                <Shield size={32} />
+            <motion.div key="intake" variants={containerVariants} initial="initial" animate="animate" exit="exit" className="space-y-10 text-center py-12">
+              <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-xl shadow-emerald-500/20">
+                <FileText size={32} />
               </div>
-              <h1 className="text-6xl font-black uppercase tracking-tighter">Clinical <br/>Verification.</h1>
-              <p className="text-slate-500 font-medium max-w-sm mx-auto">
-                Candidate suitability must be verified before protocol administration.
-              </p>
               
-              <div className="bg-white border border-slate-200 p-8 rounded-[2.5rem] space-y-4">
-                <div className="flex items-center gap-4 text-left p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                    <Calendar className="text-[#0033FF]" size={20} />
-                    <div className="space-y-1">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-[#0F172A]">01. Biomarker Analysis</p>
-                        <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Blood panel required for baseline</p>
-                    </div>
-                </div>
-                <div className="flex items-center gap-4 text-left p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                    <Stethoscope className="text-[#0033FF]" size={20} />
-                    <div className="space-y-1">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-[#0F172A]">02. specialist Consult</p>
-                        <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Protocol finalization with MD</p>
-                    </div>
-                </div>
+              <div className="space-y-4">
+                <h1 className="text-6xl font-black uppercase tracking-tighter leading-[0.9]">Medical <br/>Intake Form</h1>
+                <p className="text-slate-500 font-bold text-xs uppercase tracking-[0.2em] max-w-xs mx-auto">
+                    Complete your clinical profile to finalize protocol delivery.
+                </p>
               </div>
 
-              <button className="w-full py-10 bg-[#0F172A] text-white rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 hover:scale-[1.01] transition-all">
-                <a href="https://www.enhanced.com/products/longevity?savvy_flow_version=latest">Finalize Verification</a>
-              </button>
+              <div className="max-w-xs mx-auto pt-8">
+                 <button className="w-full py-10 bg-[#0F172A] text-white rounded-[2.5rem] font-black text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-4 hover:scale-[1.01] active:scale-[0.98] transition-all shadow-2xl">
+                    <a href="https://www.enhanced.com/products/longevity?savvy_flow_version=latest">Begin Intake Sequence</a>
+                    <ArrowRight size={18} />
+                </button>
+              </div>
+              
+              <p className="text-[9px] font-black uppercase tracking-widest text-slate-300">
+                Est. time: 3 Minutes • Encrypted & Secure
+              </p>
             </motion.div>
           )}
 
